@@ -1,0 +1,272 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap');
+
+/* ========================================================================= */
+/* BASE STYLES (DESKTOP-FIRST) */
+/* These styles serve as the default and are optimized for larger screens. */
+/* ========================================================================= */
+
+/* General Body and Container Styling */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    font-size: 20px;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+/* Main Heading */
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: #2196F3;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    letter-spacing: -0.02em;
+}
+
+/* Individual Series Section Styling (Accordion Item) */
+.series-section {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.series-section:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Header for each section (the clickable part) */
+.section-header {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 18px 25px;
+    font-size: 1.3em;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #3e8e41;
+    user-select: none;
+    transition: background-color 0.3s ease;
+}
+
+.section-header:hover {
+    background-color: #45a049;
+}
+
+/* Active state for header (when content is open) */
+.section-header.active {
+    background-color: #3e8e41;
+}
+
+/* Toggle Icon Styling */
+.section-header .toggle-icon {
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    margin-left: 15px;
+}
+
+/* Rotate icon when section is active (open) */
+.section-header.active .toggle-icon {
+    transform: rotate(90deg);
+}
+
+/* Content Area Styling (the hidden part) */
+.section-content {
+    padding: 0 25px;
+    background-color: #fcfcfc;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.7s ease-out, padding 0.7s ease-out;
+    border-top: 1px solid #eee;
+}
+
+/* When content is active (open) */
+.section-content.active {
+    max-height: fit-content;
+    padding: 20px 25px;
+    display: block;
+}
+
+.section-content p {
+    margin-bottom: 15px;
+}
+
+.section-content strong {
+    color: #007bff;
+    font-weight: 600;
+}
+
+.section-content ul {
+    margin-left: 25px;
+    margin-bottom: 15px;
+    list-style-type: disc;
+}
+
+.section-content li {
+    margin-bottom: 8px;
+}
+
+/* Call to Action Styling */
+.call-to-action {
+    font-style: italic;
+    color: #666;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px dashed #ccc;
+    font-size: 0.95em;
+}
+
+/* Subheadings within content */
+.section-content h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #4CAF50;
+    font-size: 1.6em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;
+    letter-spacing: -0.01em;
+}
+
+/* --- NEW STYLES FOR FANCY ELEMENTS --- */
+
+/* Image Styling (within a figure for caption support) */
+.article-image {
+    margin: 30px auto;
+    max-width: 100%;
+    width: fit-content;
+    display: block;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    padding: 8px;
+}
+
+.article-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
+
+.article-image figcaption {
+    text-align: center;
+    font-size: 0.9em;
+    color: #777;
+    padding: 10px 0 5px;
+    font-style: italic;
+}
+
+/* Responsive Video Embeds */
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin: 30px auto;
+    max-width: 700px;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Callout Box Styling */
+.callout-box {
+    background-color: #e6f7ff;
+    border-left: 6px solid #2196F3;
+    padding: 20px;
+    margin: 30px 0;
+    border-radius: 8px;
+    font-size: 1.1em;
+    line-height: 1.5;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.callout-box p {
+    margin: 0;
+}
+
+/* ========================================================================= */
+/* MOBILE STYLES */
+/* Adjustments for screens up to 600px wide. */
+/* ========================================================================= */
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+        margin: 10px auto;
+    }
+
+    h1 {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+
+    .section-header {
+        font-size: 1.1em;
+        padding: 15px 18px;
+    }
+
+    .section-content {
+        padding: 15px 18px;
+    }
+    
+    .section-content.active {
+        padding: 15px 18px; /* Corrected to match mobile padding */
+    }
+
+    h2 {
+        font-size: 1.4em;
+        margin-top: 20px;
+    }
+
+    .article-image, .video-container, .callout-box {
+        margin: 20px auto;
+    }
+
+    .article-image figcaption {
+        font-size: 0.8em;
+    }
+
+    .callout-box {
+        font-size: 1em;
+        padding: 15px;
+    }
+}
